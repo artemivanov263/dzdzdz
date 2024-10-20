@@ -2,37 +2,46 @@ public class Book {
     private String title;
     private Author author;
     private Integer yers;
-
-    public Integer getYers() {
-        return yers;
+    public Book() {
     }
 
-    public void setYers(Integer yers) {
+    public Book(String title, Integer yers, Author author) {
+        this.title = title;
+        this.yers = yers;
+        this.author = author;
+    }
+
+@Override
+    public  String toString() {
+        return "Book{" +
+                "author=" + author +
+                ", title='" + title + '\'' +
+                ", yers=" + yers +
+                '}';
+    }
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+
+    }public void setYers(Integer yers) {
         this.yers = yers;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public Integer getYers() {
+        return yers;
     }
 
     public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public String getTitle() {
+        return title;
     }
-    public String getinfo(){
+}
 
-        return title + " " + yers + " " + author.fulname();
-    }
-
-
-    }
 
 
 
