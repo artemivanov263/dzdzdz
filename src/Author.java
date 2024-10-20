@@ -1,28 +1,31 @@
 public class Author {
+
+
     private String name;
     private String sur_name;
 
-
-    public String getSur_name(String name) {
-        return sur_name;
+    public Author() {
     }
 
-    public void setSur_name(String sur_name) {
+    public Author (String name, String sur_name) {
+        this.name = name;
         this.sur_name = sur_name;
     }
 
-
-
-    public void setName(String name) {
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                ", sur_name='" + sur_name + '\'' +
+                '}';
+    }
+    public void setName(String name,String surname) {
         this.name = name;
+        this.sur_name = surname;
     }
 
-    public String getName() {
-        return name;
-
-    }public String  fulname (){
-        return sur_name + " " + name;
-
-
+   public String getAuthorName() {
+       return name + " " + sur_name;
     }
 }
+
